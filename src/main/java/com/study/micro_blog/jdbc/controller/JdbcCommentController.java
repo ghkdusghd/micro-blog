@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/jdbc-controller")
-public class CommentController {
+public class JdbcCommentController {
 
     private final CommentService commentService;
 
-    public CommentController(CommentService commentService) {
+    public JdbcCommentController(CommentService commentService) {
         this.commentService = commentService;
     }
 

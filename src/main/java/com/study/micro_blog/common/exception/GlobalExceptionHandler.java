@@ -2,6 +2,7 @@ package com.study.micro_blog.common.exception;
 
 import com.study.micro_blog.common.exception.custom.CustomAccessDeniedException;
 import com.study.micro_blog.common.exception.custom.NotFoundException;
+import io.swagger.v3.oas.annotations.Hidden;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import java.sql.SQLIntegrityConstraintViolationException;
 import java.time.LocalDateTime;
 
+@Hidden
 @ControllerAdvice
 public class GlobalExceptionHandler {
 

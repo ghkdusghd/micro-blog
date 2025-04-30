@@ -4,17 +4,16 @@ import com.study.micro_blog.jdbc.dto.PasswordChangeRequestDTO;
 import com.study.micro_blog.jdbc.dto.UserDTO;
 import com.study.micro_blog.jdbc.entity.User;
 import com.study.micro_blog.jdbc.service.UserService;
-import org.springframework.dao.DataAccessException;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/jdbc-controller")
-public class UserController {
+public class JdbcUserController {
 
     private final UserService userService;
 
-    public UserController(UserService userService) {
+    public JdbcUserController(UserService userService) {
         this.userService = userService;
     }
 

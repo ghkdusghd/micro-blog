@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/jdbc-controller")
-public class PostController {
+public class JdbcPostController {
 
     private final PostService postService;
 
-    public PostController(PostService postService) {
+    public JdbcPostController(PostService postService) {
         this.postService = postService;
     }
 
