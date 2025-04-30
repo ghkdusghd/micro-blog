@@ -1,0 +1,392 @@
+{
+	"info": {
+		"_postman_id": "faac9493-0d20-4de1-8dab-702a21a42cb4",
+		"name": "micro-blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34858014"
+	},
+	"item": [
+		{
+			"name": "jpa",
+			"item": [
+				{
+					"name": "http://localhost:8080/jpa-controller/users",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"hwayeon hong\",\n    \"password\" : \"1234\",\n    \"email\" : \"test@example.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jpa-controller/users"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jpa-controller/posts/1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/jpa-controller/posts/1"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jpa-controller/posts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\" : \"1\",\n    \"title\" : \"제목입니다.\",\n    \"body\" : \"내용입니다.\",\n    \"status\" : \"PUBLISHED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jpa-controller/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jpa-controller/posts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postId\" : \"1\",\n    \"userId\" : \"1\",\n    \"title\" : \"제목입니다(재업)\",\n    \"body\" : \"수정된 내용입니다 !!\",\n    \"status\" : \"PUBLISHED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jpa-controller/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jpa-controller/posts/1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\" : \"2\",\n    \"postId\" : \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jpa-controller/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jpa-controller/users/1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/jpa-controller/users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jpa-controller/users-password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\" : \"1\",\n    \"currentPWD\" : \"1234\",\n    \"newPWD\" : \"0000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jpa-controller/users-password"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jpa-controller/users/1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:8080/jpa-controller/users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jpa-controller/comments",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"productId\" : \"1\",\n    \"userId\" : \"1\",\n    \"msg\" : \"댓글입니당\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jpa-controller/comments"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jpa-controller/comments",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"commentId\" : \"1\",\n    \"productId\" : \"1\",\n    \"userId\" : \"1\",\n    \"msg\" : \"댓글입니당 (수정)\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jpa-controller/comments"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jpa-controller/comments",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\" : \"1\",\n    \"commentId\" : \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jpa-controller/comments"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "jdbc",
+			"item": [
+				{
+					"name": "http://localhost:8080/jdbc-controller/users",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\" : \"hwayeon hong\",\n    \"password\" : \"1234\",\n    \"email\" : \"hong@test.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jdbc-controller/users"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jdbc-controller/users/1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/jdbc-controller/users/1"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jdbc-controller/users-password",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\" : \"1\",\n    \"currentPWD\" : \"1234\",\n    \"newPWD\" : \"0000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jdbc-controller/users-password"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jdbc-controller/posts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\" : \"1\",\n    \"title\" : \"제목입니다\",\n    \"body\" : \"내용입니다\",\n    \"status\" : \"PUBLISHED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jdbc-controller/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jdbc-controller/posts/1",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:8080/jdbc-controller/posts/1"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jdbc-controller/posts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\" : \"1\",\n    \"postId\" : \"1\",\n    \"title\" : \"제목입니다 (수정)\",\n    \"body\" : \"수정된 내용입니다\",\n    \"status\" : \"PUBLISHED\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jdbc-controller/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jdbc-controller/posts",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"userId\" : \"1\",\n    \"postId\" : \"1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jdbc-controller/posts"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jdbc-controller/comments",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"postId\" : \"1\",\n    \"userId\" : \"1\",\n    \"msg\" : \"댓글이오 !\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jdbc-controller/comments"
+					},
+					"response": []
+				},
+				{
+					"name": "http://localhost:8080/jdbc-controller/comments",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"commentId\" : \"1\",\n    \"postId\" : \"1\",\n    \"userId\" : \"1\",\n    \"msg\" : \"수정된 댓글입니다~\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/jdbc-controller/comments"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
