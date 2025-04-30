@@ -32,6 +32,6 @@ jdbc 와 jpa 각 패키지에 들어있는 dto, entity 등은 이름은 같지�
 1. 로컬에서 애플리케이션을 실행시키면 hibernate 가 테이블을 자동 생성합니다.
 2. swagger 로 API 명세를 확인할 수 있습니다. (http://localhost:8080/swagger-ui/index.html)
 3. POSTMAN 으로 API를 테스트해볼 수 있습니다.
-    - postman_collection.json 파일 다운로드 (경로 : https://github.com/ghkdusghd/micro-blog/postman)
+    - postman_collection.json 파일 다운로드 (경로 : https://github.com/ghkdusghd/micro-blog/tree/main/postman)
     - POSTMAN 실행
     - workspace 에서 import 클릭하여 다운받은 json 파일을 넣으면 Collection 생성됨 (완료)
